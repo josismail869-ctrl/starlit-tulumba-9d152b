@@ -1,0 +1,67 @@
+/* গর্জিয়াস এবং লাক্সারি লুকের জন্য নতুন স্টাইল */
+:root {
+    --gold-color: #D4AF37; /* লাক্সারি গোল্ড কালার */
+    --deep-blue: #002366;  /* রাজকীয় নীল রং */
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+}
+
+/* হোম পেজের বড় এবং মোটা নাম */
+.main-banner {
+    background-color: var(--deep-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.main-banner h1 {
+    font-size: 48px; /* অনেক বড় সাইজ */
+    font-weight: 900; /* একদম মোটা অক্ষর */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold-color); /* গোল্ডেন কালার যা লাক্সারি দেখায় */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* লোগো এবং ইমেজকে গর্জিয়াস করার জন্য */
+.logo {
+    height: 70px; /* লোগো একটু বড় এবং স্পষ্ট */
+    filter: drop-shadow(0px 0px 5px rgba(212, 175, 55, 0.8)); /* হালকা গোল্ডেন গ্লো */
+}
+
+.reference-art img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid var(--gold-color); /* ইমেজের নিচে গোল্ডেন বর্ডার */
+}
+
+/* হটস্পট বাটনগুলোকে আরও লাক্সারি করা */
+.hotspot {
+    background: linear-gradient(45deg, var(--deep-blue), #0044cc);
+    color: var(--gold-color) !important;
+    font-weight: bold;
+    border: 2px solid var(--gold-color);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.hotspot:hover {
+    background: var(--gold-color);
+    color: var(--deep-blue) !important;
+    transform: scale(1.1);
+}
+
+/* মোবাইল ভিউয়ের নাম */
+.mobile-header {
+    background: var(--deep-blue);
+    border-bottom: 3px solid var(--gold-color);
+}

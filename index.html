@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রবাসী ভয়েজার হেল্পলাইন</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <!-- Main Title Section (একদম উপরে বড় এবং মোটা অক্ষরে) -->
+    <div class="main-banner">
+        <h1>প্রবাসী ভয়েজার হেল্পলাইন</h1>
+    </div>
+
+    <div class="portal-container">
+        <div class="desktop-view">
+            <div class="reference-art">
+                <!-- আপনার মেইন ইমেজ এখানে -->
+                <img src="assets/ProbashiVoiceGlobalPortal.png" alt="Global Portal Map" loading="lazy">
+                <div class="reference-hotspots">
+                    <button class="hotspot" data-room="Thailand">Enter Room</button>
+                    <button class="hotspot" data-room="Saudi Arabia">Enter Room</button>
+                    <button class="hotspot" data-room="UAE">Enter Room</button>
+                    <button class="hotspot" data-action="Login">Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-view">
+            <header class="mobile-header">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+                <button id="menu-toggle">☰</button>
+            </header>
+            <!-- বাকি মোবাইল অংশ আগের মতোই থাকবে -->
+            <main class="mobile-content">
+                <section id="search" class="search-section">
+                    <h2>রেফারেন্স সার্চ করুন</h2>
+                    <form id="mobile-search-form">
+                        <input type="text" id="mobile-search-input" placeholder="রেফারেন্স নম্বর লিখুন..." required>
+                        <button type="submit">সার্চ করুন</button>
+                    </form>
+                    <div id="mobile-search-result">
+                        <div id="search-loader" style="display: none;">লোড হচ্ছে...</div>
+                        <div id="search-output"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="modal-backdrop" class="modal-backdrop">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="global-footer">
+        <p class="security-note">⚠️ সতর্কবার্তা: আপনার OTP বা পাসওয়ার্ড কারো সাথে শেয়ার করবেন না।</p>
+    </footer>
+
+    <script src="supabase-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
